@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "AllStudent";
+}
+@model List<Labtask.Models.Student>
+
+<div class="container">
+    <table class="table table-condensed">
+        <tr>
+            <th>Name</th>
+            <th>Id</th>
+            <th>Date of Birth</th>
+            <th>Credit</th>
+            <th>CGPA</th>
+            <th>DEPTNO</th>
+            <th></th>
+            <th></th>
+        </tr>
+        @foreach (var student in @Model)
+        {
+    <tr>
+        <td>@student.Name</td>
+        <td>@student.Id</td>
+        <td>@student.DOB</td>
+        <td>@student.Credit</td>
+        <td>@student.CGPA</td>
+        <td>@student.deptId</td>
+        <td><a class="btn btn-success" href="/Student/Edit/@student.Id">Edit</a></td>
+        <td><a class="btn btn-danger" href="/Student/Delete/@student.Id">Delete</a></td>
+    </tr>
+        }
+
+    </table>
+</div>
+

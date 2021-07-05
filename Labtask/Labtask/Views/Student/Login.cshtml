@@ -1,0 +1,21 @@
+﻿@model Labtask.Models.Student 
+@{
+    ViewBag.Title = "Login";
+}
+
+<div>
+    <form action="/Student/Login" method="post">
+        <br />
+
+        <input type="text" name="UserName" class="form-control" placeholder="Name" />
+
+        <br />
+        <input type="text" name="password" class="form-control" placeholder="Id" />
+
+        <br />
+
+        <input type="submit" class="btn btn-block" value="Submit" />
+
+    </form>
+</div>
+

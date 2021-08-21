@@ -1,0 +1,64 @@
+<div id="page-wrapper">
+    <div class="container-fluid">
+      <div class="row bg-title">
+        <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+          <h4 class="page-title">Edit Seller</h4>
+        </div>
+      </div>
+      <div class="col-md-8 col-xs-12">
+        <div class="white-box">
+          <form class="form-horizontal form-material" >
+            <div class="form-group">
+              <label class="col-md-12">Name</label>
+              <div class="col-md-12">
+                <input type="text" ng-model="user.name" placeholder="Type Seller Name" name="name"
+                  class="form-control form-control-line" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-md-12">Status</label>
+              <div class="col-md-12">
+                <input type="text" ng-model="user.status" placeholder="Type Status" name="status"
+                  class="form-control form-control-line" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-md-12">Email</label>
+              <div class="col-md-12">
+                <input type="text" ng-model="user.email" placeholder="Type Email" name="email"
+                  class="form-control form-control-line" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-md-12">Password</label>
+              <div class="col-md-12">
+                <input type="text" ng-model="user.password" placeholder="Type Password" name="password"
+                  class="form-control form-control-line" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-md-12">Image</label>
+              <div class="col-md-12">
+                <input type="text" ng-model="user.image" placeholder="Image" name="image"
+                  class="form-control form-control-line" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-md-12">Phone</label>
+              <div class="col-md-12">
+                <input type="text" ng-model="user.phone" placeholder="Phone" name="phone"
+                  class="form-control form-control-line" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-12">
+                <input type="submit" ng-click="edit(user)" name="add_seller" class="btn btn-success" value="Edit" />
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- /.container-fluid -->
+    <footer class="footer text-center">2021 &copy; InraBd</footer>
+  </div>

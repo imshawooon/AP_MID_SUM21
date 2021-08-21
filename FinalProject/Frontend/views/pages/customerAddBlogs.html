@@ -1,0 +1,29 @@
+<div id="page-wrapper">
+    <div class="container-fluid">
+      <div class="row bg-title">
+        <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+          <h4 class="page-title">Add Blog</h4>
+        </div>
+      </div>
+      <div class="col-md-8 col-xs-12">
+        <div class="white-box">
+          <form class="form-horizontal form-material">
+            <div class="form-group">
+              <label class="col-md-12">Blog</label>
+              <div class="col-md-12">
+                <input type="textarea" ng-model="blog.blog1" placeholder="Type Your Blog here please" name="blog"
+                  class="form-control form-control-line" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-12">
+                <input type="submit" ng-click="addBlog(blog)" name="add_blog" class="btn btn-success" value="Add" />
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- /.container-fluid -->
+    <footer class="footer text-center">2021 &copy; InraBd</footer>
+  </div>

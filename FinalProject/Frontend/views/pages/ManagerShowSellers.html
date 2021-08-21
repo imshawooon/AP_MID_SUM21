@@ -1,0 +1,72 @@
+<div id="page-wrapper">
+    <div class="container-fluid">
+      <div class="row bg-title">
+        <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+          <h4 class="page-title">Sellers</h4>
+        </div>
+        <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+          <ol class="breadcrumb">
+            <li><a href="#">Dashboard</a></li>
+            <li class="active">Sellers</li>
+          </ol>
+        </div>
+        <!-- /.col-lg-12 -->
+      </div>
+      <!-- /row -->
+      <div class="center pull-left">
+        <button ng-click="ShowAll()" class="btn btn-warning">Show All</button>
+        <br /><br /><br />
+      </div>
+      <div class="center pull-right app-search hidden-sm hidden-xs m-r-10">
+        <input type="text" placeholder="Search by name" class="form-control" ng-model="search" />
+        <button ng-click="Search()" class="btn btn-primary">Search</button>
+        <br>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="white-box">
+            <div class="table-responsive">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>id</th>
+                    <th>Name</th>
+                    <th>Status</th>
+                    <th>UserType</th>
+                    <th>Created at</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                    <th>Image</th>
+                    <th>Phone</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr ng-repeat="user in users">
+                    <td>{{user.userid}}</td>
+                    <td>{{user.name}}</td>
+                    <td>{{user.status}}</td>
+                    <td>{{user.usertype}}</td>
+                    <td>{{user.createdat}}</td>
+                    <td>{{user.email}}</td>
+                    <td>{{user.password}}</td>
+                    <td>{{user.image}}</td>
+                    <td>{{user.phone}}</td>
+                    <td><a href="#!manager/seller/edit/{{user.userid}}" class="btn btn-success">Edit</a></td>
+                    <td>
+                      <input type="submit" ng-model="delete" ng-click="delete(user.userid)" name="delete_user"
+                        class="btn btn-danger" value="Delete" />
+                    </td>
+                  </tr>
+                  <!-- ?'ng-click="
+                        delete(product.packageid)"" -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+    <footer class="footer text-center">2021 &copy; InraBd</footer>
+  </div>

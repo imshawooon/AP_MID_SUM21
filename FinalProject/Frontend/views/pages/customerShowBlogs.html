@@ -1,0 +1,56 @@
+<div id="page-wrapper">
+    <div class="container-fluid">
+      <div class="row bg-title">
+        <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+          <h4 class="page-title">Blogs</h4>
+        </div>
+        <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+          <ol class="breadcrumb">
+            <li><a href="#">Dashboard</a></li>
+            <li class="active">Blogs</li>
+          </ol>
+        </div>
+        <!-- /.col-lg-12 -->
+      </div>
+      <!-- /row -->
+      <div class="center pull-left">
+        <h1>Blogs</h1>
+        <button ng-click="ShowAll()" class="btn btn-warning">Show All</button>
+        <br /><br /><br />
+      </div>
+      <div class="center pull-right app-search hidden-sm hidden-xs m-r-10">
+        <input type="text" placeholder="Search by name" class="form-control" ng-model="search" />
+        <button ng-click="Search()" class="btn btn-primary">Search</button>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="white-box">
+            <div class="table-responsive">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Blog Id</th>
+                    <th>Blog </th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr ng-repeat="blog in blogs">
+                    <td>{{blog.blogid}}</td>
+                    <td>{{blog.blog1}}</td>
+                    <td><a href="#!customer/EditBlog/{{blog.blogid}}" class="btn btn-success"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i>Edit</a> |
+                            <input type="submit" ng-model="delete" ng-click="delete(blog.blogid)" name="delete_blog"
+                              class="btn btn-danger" value="Delete Blog" />
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+    <footer class="footer text-center">2021 &copy; InraBd</footer>
+  </div>

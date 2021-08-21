@@ -1,0 +1,66 @@
+<div id="page-wrapper">
+    <div class="container-fluid">
+      <div class="row bg-title">
+        <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+          <h4 class="page-title">Order List</h4>
+        </div>
+        <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+          <ol class="breadcrumb">
+            <li><a href="#!customer/dashboard">Dashboard</a></li>
+            <li class="active">Order List</li>
+          </ol>
+        </div>
+        <!-- /.col-lg-12 -->
+      </div>
+      <!-- /row -->
+      <div class="center pull-left">
+        <h1>Order list</h1>
+        <button ng-click="ShowAll()" class="btn btn-warning">Show All</button>
+        <br /><br /><br />
+      </div>
+      <div class="center pull-right app-search hidden-sm hidden-xs m-r-10">
+        <input type="text" placeholder="Search by name" class="form-control" ng-model="search" />
+        <button ng-click="Search()" class="btn btn-primary">Search</button>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="white-box">
+            <div class="table-responsive">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Order Id</th>
+                    <th>Order Name</th>
+                    <th>Pay type</th>
+                    <th>Quantity</th>
+                    <th>Total Price</th>
+                    <th>Status</th>
+                    <th>Ordered at</th>
+                    <th>Action</th>
+                   
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr ng-repeat="order in orders">
+                    <td><a href="#!customer/orders/{{order.orderid}}">{{order.orderid}}</a></td>
+                    <td>{{order.ordername}}</td>
+                    <td>{{order.paytype}}</td>
+                    <td>{{order.quantity}}</td>
+                    <td>{{order.totalprice}}</td>
+                    <td>{{order.status}}</td>
+                    <td>{{order.createdat}}</td>
+                    <td><a href="#!customer/orders/{{order.orderid}}" class="btn btn-success"><i class="fa fa-info-circle fa-fw" aria-hidden="true"></i>Details</a> |
+                        <input type="submit" ng-model="cancel" ng-click="cancel(order.orderid)" name = "cancel_order"
+                        class="btn btn-danger" value="Cancel Order" /></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+    <footer class="footer text-center">2021 &copy; InraBd</footer>
+  </div>
